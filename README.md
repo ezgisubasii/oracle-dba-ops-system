@@ -1,6 +1,6 @@
 # Oracle DBA Ops System
 
-Automating day-to-day Oracle DBA work on Linux: schema setup, test refresh with
+Automating Oracle DBA work on Linux: schema setup, test refresh with
 PII masking, RMAN backups with restore validation, and incident runbooks with
 root cause analysis.
 
