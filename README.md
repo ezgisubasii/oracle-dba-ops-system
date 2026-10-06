@@ -36,7 +36,7 @@ bash scripts/backup_rman.sh
 
 ## Roadmap
 
-- [ ] Incident 02: blocking session (row lock contention)
+- [X] Incident 02: blocking session (row lock contention)
 - [ ] Incident 03: archiver stuck (ORA-00257)
 - [ ] Incident 04: listener down (ORA-12541)
 - [ ] Health check in Python
