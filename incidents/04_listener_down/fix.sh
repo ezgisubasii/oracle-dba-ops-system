@@ -1,8 +1,9 @@
 #starts the listener and registers the database services with it
 set -euo pipefail
 
+source "$(git rev-parse --show-toplevel)/config.env"
 CONTAINER="oracle-dba-lab"
-CONN="system/Ankara06@//localhost:1521/FREEPDB1"
+CONN="system/${ORACLE_PASSWORD}@//localhost:1521/FREEPDB1"
 
 docker exec "$CONTAINER" lsnrctl start
 

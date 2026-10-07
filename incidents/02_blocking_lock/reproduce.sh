@@ -2,8 +2,9 @@
 # update two sessions in same line, billing_batch is waiting without commit, web_checkout is waiting to billing_batch
 set -euo pipefail
 
+source "$(git rev-parse --show-toplevel)/config.env"
 CONTAINER="oracle-dba-lab"
-APP_CONN="prod_app/Ankara06@//localhost:1521/FREEPDB1"
+APP_CONN="prod_app/${APP_PASSWORD}@//localhost:1521/FREEPDB1"
 DIR="$(dirname "$0")"
 
 

@@ -2,8 +2,9 @@
 # Copy to PROD_APP schema to TEST_APP and mask personal data
 set -euo pipefail
 
+source "$(git rev-parse --show-toplevel)/config.env"
 CONTAINER="oracle-dba-lab"
-CONN="system/Ankara06@//localhost:1521/FREEPDB1"
+CONN="system/${ORACLE_PASSWORD}@//localhost:1521/FREEPDB1"
 SRC="PROD_APP"
 TGT="TEST_APP"
 DUMP="refresh_${SRC}.dmp"

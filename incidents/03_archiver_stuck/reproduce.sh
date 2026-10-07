@@ -2,8 +2,9 @@
 # It lowers the Flash Recovery Area (FRA) limit and generates heavy changes, archiver stalls.
 set -euo pipefail
 
+source "$(git rev-parse --show-toplevel)/config.env"
 CONTAINER="oracle-dba-lab"
-APP_CONN="prod_app/Ankara06@//localhost:1521/FREEPDB1"
+APP_CONN="prod_app/${APP_PASSWORD}@//localhost:1521/FREEPDB1"
 DIR="$(dirname "$0")"
 
 # 1. lower the FRA threshold to 5 MB above my current usage (only memory)

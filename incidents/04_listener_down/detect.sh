@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Checks each layer, from the network port up to the database
+source "$(git rev-parse --show-toplevel)/config.env"
 CONTAINER="oracle-dba-lab"
-CONN="system/Ankara06@//localhost:1521/FREEPDB1"
+CONN="system/${ORACLE_PASSWORD}@//localhost:1521/FREEPDB1"
 
 echo "== 1. TCP. Is anything listening on port 1521 inside the container? =="
 docker exec "$CONTAINER" bash -c 'if timeout 3 bash -c "</dev/tcp/127.0.0.1/1521" 2>/dev/null; then echo "port 1521 open"; else echo "port 1521 closed"; fi'
