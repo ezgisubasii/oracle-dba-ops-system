@@ -25,6 +25,7 @@ Each incident is reproduced on purpose, diagnosed with SQL, fixed, and documente
 | 01 | Tablespace full | ORA-01653 | [RCA](incidents/01_tablespace_full/RCA.md) |
 | 02 | Blocking session | enq: TX - row lock contention | [RCA](incidents/02_blocking_lock/RCA.md) |
 | 03 | Archiver stuck | ORA-00257 | [RCA](incidents/03_archiver_stuck/RCA.md) |
+| 04 | Listener down | ORA-12541 | [RCA](incidents/04_listener_down/RCA.md) |
 
 
 ## How to run
@@ -41,7 +42,7 @@ bash scripts/backup_rman.sh
 
 - [X] Incident 02: blocking session (row lock contention)
 - [X] Incident 03: archiver stuck (ORA-00257)
-- [ ] Incident 04: listener down (ORA-12541)
+- [X] Incident 04: listener down (ORA-12541)
 - [ ] Health check in Python
 - [ ] SLA timing for each incident
 
