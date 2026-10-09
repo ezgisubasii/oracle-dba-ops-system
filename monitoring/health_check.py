@@ -62,8 +62,10 @@ def main():
 
     try:
         connection = oracledb.connect(user="system", password=config["ORACLE_PASSWORD"], dsn=DSN)
-    except oracledb.Error as error:
-        results.append(("connection", (CRITICAL, str(error))))
+    except (oracledb.Error, OSError) as error:
+        if isinstance(error, OSError) and error.__context__:
+            error = error.__context__
+        results.append(("connection", (CRITICAL, str(error).splitlines()[0])))
     else:
         with connection.cursor() as cursor:
             results.append(("instance", check_instance(cursor)))
