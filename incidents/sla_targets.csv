@@ -1,0 +1,6 @@
+incident,priority,detect_target_sec,resolve_target_Sec
+01_tablespace_full,P2,300,1800
+02_blocking_lock,P2,300,1800
+03_archiver_stuck,P1,300,900
+04_listener_down,P1,300,900
+

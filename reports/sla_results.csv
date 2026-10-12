@@ -1,0 +1,5 @@
+date,incident,priority,detect_sec,detect_target_sec,resolve_sec,resolve_target_sec,sla
+2026-10-12 16:09,02_blocking_lock,P2,7,300,10,1800,MET
+2026-10-12 16:11,01_tablespace_full,P2,2,300,34,1800,MET
+2026-10-12 16:12,03_archiver_stuck,P1,1,300,35,900,MET
+2026-10-12 16:12,04_listener_down,P1,1,300,2,900,MET
