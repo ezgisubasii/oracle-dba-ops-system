@@ -121,11 +121,3 @@ bash scripts/enable_archivelog.sh
 bash scripts/backup_rman.sh
 ```
 
-## Roadmap
-
-- [X] Incident 02: blocking session (row lock contention)
-- [X] Incident 03: archiver stuck (ORA-00257)
-- [X] Incident 04: listener down (ORA-12541)
-- [X] Health check in Python
-- [ ] SLA timing for each incident
-
