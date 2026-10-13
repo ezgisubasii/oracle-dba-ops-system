@@ -9,7 +9,7 @@ docker exec "$CONTAINER" mkdir -p "$FRA_DIR"
 
 docker exec -i "$CONTAINER" sqlplus -s / as sysdba <<SQL
 WHENEVER SQLERROR EXIT FAILURE
-ALTER SYSTEM SET db_recovery_file_dest_size = 4G SCOPE = BOTH;
+ALTER SYSTEM SET db_recovery_file_dest_size = 2G SCOPE = BOTH;
 ALTER SYSTEM SET db_recovery_file_dest = '$FRA_DIR' SCOPE = BOTH;
 SHUTDOWN IMMEDIATE
 STARTUP MOUNT
