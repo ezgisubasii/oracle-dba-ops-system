@@ -4,7 +4,7 @@ Automating Oracle DBA work on Linux that includes schema setup, test refresh wit
 PII masking, RMAN backups with restore validation, and incident runbooks with
 root cause analysis.
 
-Runs on a CentOS 7 VM with Oracle Database 23ai Free in Docker.
+Runs on a VM with Oracle Database 23ai Free in Docker.
 
 ## What it does
 
